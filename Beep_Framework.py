@@ -64,8 +64,8 @@ def config_tool():
     engine.say("Welcome to Host Configuration Checker")
     engine.runAndWait()
 
-    URL_BASE = "http://speb91.lss.emc.com:8080/RestapiSystemManager/sysmgr/"
-    hosts = ['speb91.lss.emc.com', 'speb90.lss.emc.com', 'speb97.lss.emc.com']
+    URL_BASE = "http://API_Server:8080/RestapiSystemManager/sysmgr/"
+    hosts = ['API_Server1', 'API_Server2', 'API_Server3']
 
     for host in hosts:
         print("Pinging host ", host + "...")
@@ -151,7 +151,7 @@ def yess():
     raise SystemExit()
 	
 def check_status():
-    URL="http://speb91.lss.emc.com:8080/RestapiSystemManager/sysmgr/sysinfo"
+    URL="http://API_Server:8080/RestapiSystemManager/sysmgr/sysinfo"
     #print("Connecting to " + URL)
     print("Connecting to " + URL)
     engine.say("Connecting to " + URL)
@@ -167,7 +167,7 @@ def check_status():
         engine.runAndWait()
 
 def kannan_server():
-    URL="http://speb91.lss.emc.com:8080/RestapiSystemManager/sysmgr/sysinfo"
+    URL="http://API_Server:8080/RestapiSystemManager/sysmgr/sysinfo"
     print("Connecting to " + URL)
     engine.say("Connecting to " + URL)
     engine.runAndWait()
